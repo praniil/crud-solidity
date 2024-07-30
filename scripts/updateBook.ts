@@ -10,7 +10,7 @@ async function main() {
 
     const crud = await hre.ethers.getContractAt("CRUD", address)
     const updateBook = await crud.updateBook(1, "University Chemistry", "Rollie J. Myers")
-    await updateBook.wait();
+    await updateBook.wait()
     const readBook = await crud.readBook(1)
     console.log(readBook)
 }
